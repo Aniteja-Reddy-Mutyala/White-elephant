@@ -2,33 +2,23 @@
   "teams": [
     {
       "id": 1,
-      "name": "Bunny",
-      "score": 600
+      "name": "Shivani",
+      "score": 2250
     },
     {
       "id": 2,
-      "name": "Bun Tea",
-      "score": 350
+      "name": "Bunny",
+      "score": 1200
     },
     {
       "id": 3,
-      "name": "Dilkush",
-      "score": 150
+      "name": "Teja",
+      "score": 0
     },
     {
       "id": 4,
-      "name": "Dil Pasand",
-      "score": 150
-    },
-    {
-      "id": 5,
-      "name": "Irani Chai",
-      "score": 150
-    },
-    {
-      "id": 6,
-      "name": "Coffee",
-      "score": 50
+      "name": "Anirudh",
+      "score": 2150
     }
   ],
   "goodies": [
@@ -53,13 +43,8 @@
       "name": "Gaming Mouse",
       "image": "🖱️",
       "value": 50,
-      "revealed": true,
-      "winner": {
-        "teamId": 2,
-        "teamName": "Bun Tea",
-        "bidAmount": 100
-      },
-      "reauctionCount": 1
+      "revealed": false,
+      "winner": null
     },
     {
       "id": 4,
@@ -74,30 +59,16 @@
       "name": "Bluetooth Speaker",
       "image": "🔊",
       "value": 50,
-      "revealed": true,
-      "winner": {
-        "teamId": 6,
-        "teamName": "Coffee",
-        "bidAmount": 50
-      }
+      "revealed": false,
+      "winner": null
     },
     {
       "id": 6,
       "name": "Instant Camera",
       "image": "📷",
       "value": 50,
-      "revealed": true,
-      "winner": null,
-      "reauctionCount": 3,
-      "originalOwnerForReauction": {
-        "teamId": 6,
-        "teamName": "Coffee"
-      },
-      "reauctionRequestingTeam": {
-        "teamId": 5,
-        "teamName": "Irani Chai",
-        "reauctionCost": 100
-      }
+      "revealed": false,
+      "winner": null
     },
     {
       "id": 7,
@@ -249,7 +220,7 @@
     "currentTurn": null,
     "gameStatus": "in_progress",
     "revealedItems": [],
-    "lastUpdated": "2025-12-27T03:09:03.699Z"
+    "lastUpdated": "2025-12-27T04:45:32.727Z"
   },
   "settings": {
     "minBidAmount": 1,
