@@ -1791,30 +1791,34 @@ html, body {
 }
 
 .reauction-team-btn.disabled {
-  background: rgba(0, 0, 0, 0.3);
-  border-color: rgba(255, 255, 255, 0.2);
-  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.3);
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
 .reauction-team-name {
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
   font-weight: 700;
   color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .reauction-team-score {
-  font-size: 1.5rem;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
   font-weight: 700;
-  color: #4CAF50;
-  background: rgba(76, 175, 80, 0.2);
-  padding: 5px 15px;
-  border-radius: 15px;
+  color: #fff;
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  padding: 8px 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.4);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .reauction-team-btn.disabled .reauction-team-score {
-  color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(100, 100, 100, 0.4);
+  box-shadow: none;
 }
 
 .owner-tag {
