@@ -363,67 +363,57 @@ const WhiteElephantGameComplete = () => {
 
   // ========== GAME OPERATIONS ==========
 
-  const getTopScorer = () => {
-    if (!db || db.teams.length === 0) return null;
-    return db.teams.reduce((prev, current) =>
-      prev.score > current.score ? prev : current
-    );
-  };
-
   // Reveal a card via API
   const handleRevealCard = async (id) => {
-    const topScorer = getTopScorer();
-    if (topScorer && db.gameState.currentTurn === topScorer.name) {
-      // Save current scroll position IMMEDIATELY
-      const scrollPosition = window.scrollY || window.pageYOffset;
-      
-      // Create a scroll lock function
-      const lockScroll = (e) => {
-        window.scrollTo(0, scrollPosition);
-      };
-      
-      // Add scroll lock listener
-      window.addEventListener('scroll', lockScroll, { passive: false });
-      
-      // Store in state for useEffect
-      setSavedScrollPosition(scrollPosition);
-      setPreserveScroll(true);
-      
-      try {
-        await fetch(`${API_URL}/goodies/${id}/reveal`, { method: "PUT" });
-        await fetch(`${API_URL}/gamestate`, {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ currentTurn: null }),
-        });
+    // Save current scroll position IMMEDIATELY
+    const scrollPosition = window.scrollY || window.pageYOffset;
+    
+    // Create a scroll lock function
+    const lockScroll = (e) => {
+      window.scrollTo(0, scrollPosition);
+    };
+    
+    // Add scroll lock listener
+    window.addEventListener('scroll', lockScroll, { passive: false });
+    
+    // Store in state for useEffect
+    setSavedScrollPosition(scrollPosition);
+    setPreserveScroll(true);
+    
+    try {
+      await fetch(`${API_URL}/goodies/${id}/reveal`, { method: "PUT" });
+      await fetch(`${API_URL}/gamestate`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ currentTurn: null }),
+      });
 
-        await loadDatabase();
-        setFlippedCards({ ...flippedCards, [id]: true });
-        
-        // Multiple restore attempts
+      await loadDatabase();
+      setFlippedCards({ ...flippedCards, [id]: true });
+      
+      // Multiple restore attempts
+      window.scrollTo(0, scrollPosition);
+      requestAnimationFrame(() => {
         window.scrollTo(0, scrollPosition);
-        requestAnimationFrame(() => {
-          window.scrollTo(0, scrollPosition);
-        });
-        setTimeout(() => {
-          window.scrollTo(0, scrollPosition);
-        }, 10);
-        
-        const revealedGoodie = db.goodies.find(g => g.id === id);
-        showNotification(
-          `${topScorer.name} revealed ${revealedGoodie?.name || `Item #${id}`}!`,
-          'success'
-        );
-      } catch (error) {
-        console.error("Error revealing card:", error);
-        showNotification("Failed to reveal card", 'error');
-        setPreserveScroll(false);
-      } finally {
-        // Remove scroll lock after a delay
-        setTimeout(() => {
-          window.removeEventListener('scroll', lockScroll);
-        }, 100);
-      }
+      });
+      setTimeout(() => {
+        window.scrollTo(0, scrollPosition);
+      }, 10);
+      
+      const revealedGoodie = db.goodies.find(g => g.id === id);
+      showNotification(
+        `Revealed ${revealedGoodie?.name || `Item #${id}`}!`,
+        'success'
+      );
+    } catch (error) {
+      console.error("Error revealing card:", error);
+      showNotification("Failed to reveal card", 'error');
+      setPreserveScroll(false);
+    } finally {
+      // Remove scroll lock after a delay
+      setTimeout(() => {
+        window.removeEventListener('scroll', lockScroll);
+      }, 100);
     }
   };
 
@@ -435,25 +425,6 @@ const WhiteElephantGameComplete = () => {
   };
 
   // Start top scorer's turn via API
-  const startTopScorerTurn = async () => {
-    const topScorer = getTopScorer();
-    if (topScorer) {
-      try {
-        await fetch(`${API_URL}/gamestate`, {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ currentTurn: topScorer.name }),
-        });
-
-        await loadDatabase();
-        showNotification(`${topScorer.name}'s turn started!`, 'success');
-      } catch (error) {
-        console.error("Error starting turn:", error);
-        showNotification("Failed to start turn", 'error');
-      }
-    }
-  };
-
   // Get current highest bid for an item
   const getCurrentBid = (itemId) => {
     const activeBids = db.bids.filter(
@@ -803,23 +774,9 @@ const WhiteElephantGameComplete = () => {
                   <Trophy size={32} />
                   Leaderboard
                 </h2>
-                {!db.gameState.currentTurn && db.teams.length > 0 && (
-                  <button
-                    onClick={startTopScorerTurn}
-                    className="start-turn-button button-hover"
-                  >
-                    🎯 Start Top Scorer's Turn
-                  </button>
-                )}
-                {db.gameState.currentTurn && (
-                  <div className="current-turn-indicator">
-                    🎮 {db.gameState.currentTurn}'s Turn - Pick a Card!
-                  </div>
-                )}
               </div>
               <div className="leaderboard-grid">
                 {db.teams.map((team, index) => {
-                  const isTopScorer = team.name === getTopScorer()?.name;
                   const isEditing = editingScore === team.id;
                   
                   // Get winnings for this team
@@ -835,9 +792,7 @@ const WhiteElephantGameComplete = () => {
                   return (
                     <div
                       key={team.id}
-                      className={`scorer-card ${
-                        isTopScorer ? "scorer-card-top" : "scorer-card-regular"
-                      }`}
+                      className="scorer-card scorer-card-regular"
                       style={{
                         animation: `fadeIn 0.6s ease-out ${
                           index * 0.1
@@ -846,7 +801,6 @@ const WhiteElephantGameComplete = () => {
                       onMouseEnter={() => setHoveredTeam(team.id)}
                       onMouseLeave={() => setHoveredTeam(null)}
                     >
-                      {isTopScorer && <div className="crown-icon">👑</div>}
                       <div className="scorer-name">{team.name}</div>
                       
                       {/* Hover Card for Winnings */}
@@ -925,11 +879,7 @@ const WhiteElephantGameComplete = () => {
                           </div>
                         ) : (
                           <div
-                            className={`scorer-points scorer-points-editable ${
-                              isTopScorer
-                                ? "scorer-points-top"
-                                : "scorer-points-regular"
-                            }`}
+                            className="scorer-points scorer-points-editable scorer-points-regular"
                             onClick={() => handleScoreClick(team.id, team.score)}
                             title="Click to edit score"
                           >
@@ -989,10 +939,6 @@ const WhiteElephantGameComplete = () => {
                           </button>
                         </div>
                       </div>
-                      
-                      {isTopScorer && (
-                        <div className="top-scorer-label">TOP SCORER</div>
-                      )}
                     </div>
                   );
                 })}
@@ -1105,7 +1051,37 @@ const WhiteElephantGameComplete = () => {
                                   </div>
                                 )}
                                 
-                                <div className="goodie-emoji-sold">{goodie.image}</div>
+                                {/* Product Image/Emoji - clickable if productUrl exists */}
+                                {goodie.productUrl ? (
+                                  <a 
+                                    href={goodie.productUrl} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="goodie-product-link"
+                                    onClick={(e) => e.stopPropagation()}
+                                  >
+                                    {goodie.imageUrl ? (
+                                      <img 
+                                        src={goodie.imageUrl} 
+                                        alt={goodie.name}
+                                        className="goodie-image-sold"
+                                      />
+                                    ) : (
+                                      <div className="goodie-emoji-sold">{goodie.image}</div>
+                                    )}
+                                  </a>
+                                ) : (
+                                  goodie.imageUrl ? (
+                                    <img 
+                                      src={goodie.imageUrl} 
+                                      alt={goodie.name}
+                                      className="goodie-image-sold"
+                                    />
+                                  ) : (
+                                    <div className="goodie-emoji-sold">{goodie.image}</div>
+                                  )
+                                )}
+                                
                                 <div className="goodie-name-sold">{goodie.name}</div>
                                 <div className="goodie-owner-sold">{goodie.winner.teamName}</div>
                                 <div className="goodie-price-sold-badge">
@@ -1159,7 +1135,37 @@ const WhiteElephantGameComplete = () => {
                         ) : (
                           // Back of card - UPDATED
                           <>
-                            <div className="goodie-emoji">{goodie.image}</div>
+                            {/* Product Image/Emoji - clickable if productUrl exists */}
+                            {goodie.productUrl ? (
+                              <a 
+                                href={goodie.productUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="goodie-product-link"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                {goodie.imageUrl ? (
+                                  <img 
+                                    src={goodie.imageUrl} 
+                                    alt={goodie.name}
+                                    className="goodie-image"
+                                  />
+                                ) : (
+                                  <div className="goodie-emoji">{goodie.image}</div>
+                                )}
+                              </a>
+                            ) : (
+                              goodie.imageUrl ? (
+                                <img 
+                                  src={goodie.imageUrl} 
+                                  alt={goodie.name}
+                                  className="goodie-image"
+                                />
+                              ) : (
+                                <div className="goodie-emoji">{goodie.image}</div>
+                              )
+                            )}
+                            
                             <div className="goodie-name">{goodie.name}</div>
                             
                             {/* Show re-bid amount if won, otherwise original value */}
@@ -1372,7 +1378,36 @@ const WhiteElephantGameComplete = () => {
               <button className="modal-close-btn" onClick={closeModal}>✕</button>
               
               <div className="modal-card-display">
-                <div className="modal-card-emoji">{selectedCard.image}</div>
+                {/* Product Image/Emoji - clickable if productUrl exists */}
+                {selectedCard.productUrl ? (
+                  <a 
+                    href={selectedCard.productUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="goodie-product-link"
+                  >
+                    {selectedCard.imageUrl ? (
+                      <img 
+                        src={selectedCard.imageUrl} 
+                        alt={selectedCard.name}
+                        className="modal-card-image"
+                      />
+                    ) : (
+                      <div className="modal-card-emoji">{selectedCard.image}</div>
+                    )}
+                  </a>
+                ) : (
+                  selectedCard.imageUrl ? (
+                    <img 
+                      src={selectedCard.imageUrl} 
+                      alt={selectedCard.name}
+                      className="modal-card-image"
+                    />
+                  ) : (
+                    <div className="modal-card-emoji">{selectedCard.image}</div>
+                  )
+                )}
+                
                 <div className="modal-card-name">{selectedCard.name}</div>
                 <div className="modal-card-value">Original Value: ${selectedCard.value}</div>
                 

@@ -2,23 +2,33 @@
   "teams": [
     {
       "id": 1,
-      "name": "Shivani",
-      "score": 2250
+      "name": "Bunny",
+      "score": 600
     },
     {
       "id": 2,
-      "name": "Bunny",
-      "score": 1200
+      "name": "Bun Tea",
+      "score": 400
     },
     {
       "id": 3,
-      "name": "Teja",
-      "score": 0
+      "name": "Dilkush",
+      "score": 150
     },
     {
       "id": 4,
-      "name": "Anirudh",
-      "score": 2150
+      "name": "Dil Pasand",
+      "score": 150
+    },
+    {
+      "id": 5,
+      "name": "Irani Chai",
+      "score": 150
+    },
+    {
+      "id": 6,
+      "name": "Coffee",
+      "score": 300
     }
   ],
   "goodies": [
@@ -26,6 +36,8 @@
       "id": 1,
       "name": "Wireless Headphones",
       "image": "🎧",
+      "imageUrl": "1.jpg",
+      "productUrl": "https://www.amazon.com/Amazon-eero-Wi-Fi-router-newest/dp/B08ZK3D89L/?_encoding=UTF8&pd_rd_w=9ebe3&content-id=amzn1.sym.248f328a-4ea5-4b15-ba39-a5ce60284cc9&pf_rd_p=248f328a-4ea5-4b15-ba39-a5ce60284cc9&pf_rd_r=B5ECC6VP3HA32DHKWPJ9&pd_rd_wg=CRLVZ&pd_rd_r=88b9e5e2-5263-48f8-b324-f13a15e86413&ref_=pd_hp_d_atf_dealz_sod&th=1",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -34,6 +46,8 @@
       "id": 2,
       "name": "Gourmet Coffee Set",
       "image": "☕",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -42,6 +56,8 @@
       "id": 3,
       "name": "Gaming Mouse",
       "image": "🖱️",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -50,6 +66,8 @@
       "id": 4,
       "name": "Smart Watch",
       "image": "⌚",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -58,6 +76,8 @@
       "id": 5,
       "name": "Bluetooth Speaker",
       "image": "🔊",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -66,6 +86,8 @@
       "id": 6,
       "name": "Instant Camera",
       "image": "📷",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -74,6 +96,8 @@
       "id": 7,
       "name": "Plant Terrarium",
       "image": "🌿",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -82,6 +106,8 @@
       "id": 8,
       "name": "Book Collection",
       "image": "📚",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -90,6 +116,8 @@
       "id": 9,
       "name": "Yoga Mat Set",
       "image": "🧘",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -98,6 +126,8 @@
       "id": 10,
       "name": "BBQ Tool Kit",
       "image": "🍖",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -106,6 +136,8 @@
       "id": 11,
       "name": "Art Supplies",
       "image": "🎨",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -114,6 +146,8 @@
       "id": 12,
       "name": "Tea Sampler",
       "image": "🍵",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -122,6 +156,8 @@
       "id": 13,
       "name": "Portable Charger",
       "image": "🔋",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -130,6 +166,8 @@
       "id": 14,
       "name": "Cozy Blanket",
       "image": "🛋️",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -138,6 +176,8 @@
       "id": 15,
       "name": "Recipe Book",
       "image": "📖",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -146,6 +186,8 @@
       "id": 16,
       "name": "Desk Organizer",
       "image": "📌",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -154,6 +196,8 @@
       "id": 17,
       "name": "Essential Oils Set",
       "image": "🧴",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -162,6 +206,8 @@
       "id": 18,
       "name": "Travel Mug",
       "image": "🥤",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -170,6 +216,8 @@
       "id": 19,
       "name": "Puzzle Game",
       "image": "🧩",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -178,6 +226,8 @@
       "id": 20,
       "name": "Scented Candles",
       "image": "🕯️",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -186,6 +236,8 @@
       "id": 21,
       "name": "Kitchen Gadget Set",
       "image": "🍴",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -194,6 +246,8 @@
       "id": 22,
       "name": "Phone Stand",
       "image": "📱",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -202,6 +256,8 @@
       "id": 23,
       "name": "Notebook Set",
       "image": "📝",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -210,6 +266,8 @@
       "id": 24,
       "name": "Water Bottle",
       "image": "💧",
+      "imageUrl": "",
+      "productUrl": "",
       "value": 50,
       "revealed": false,
       "winner": null
@@ -220,7 +278,7 @@
     "currentTurn": null,
     "gameStatus": "in_progress",
     "revealedItems": [],
-    "lastUpdated": "2025-12-27T04:45:32.727Z"
+    "lastUpdated": "2025-12-27T05:00:00.000Z"
   },
   "settings": {
     "minBidAmount": 1,

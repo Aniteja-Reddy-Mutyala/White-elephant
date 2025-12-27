@@ -57,6 +57,10 @@ function getInitialDatabase() {
         "id": 1,
         "name": "Wireless Headphones",
         "image": "🎧",
+        "imageUrl": "",
+        "productUrl": "",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -65,6 +69,10 @@ function getInitialDatabase() {
         "id": 2,
         "name": "Gourmet Coffee Set",
         "image": "☕",
+        "imageUrl": "",
+        "productUrl": "",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -73,6 +81,10 @@ function getInitialDatabase() {
         "id": 3,
         "name": "Gaming Mouse",
         "image": "🖱️",
+        "imageUrl": "",
+        "productUrl": "",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -81,6 +93,10 @@ function getInitialDatabase() {
         "id": 4,
         "name": "Smart Watch",
         "image": "⌚",
+        "imageUrl": "",
+        "productUrl": "",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -89,6 +105,8 @@ function getInitialDatabase() {
         "id": 5,
         "name": "Bluetooth Speaker",
         "image": "🔊",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -97,6 +115,8 @@ function getInitialDatabase() {
         "id": 6,
         "name": "Instant Camera",
         "image": "📷",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -105,6 +125,8 @@ function getInitialDatabase() {
         "id": 7,
         "name": "Plant Terrarium",
         "image": "🌿",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -113,6 +135,8 @@ function getInitialDatabase() {
         "id": 8,
         "name": "Book Collection",
         "image": "📚",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -121,6 +145,8 @@ function getInitialDatabase() {
         "id": 9,
         "name": "Yoga Mat Set",
         "image": "🧘",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -129,6 +155,8 @@ function getInitialDatabase() {
         "id": 10,
         "name": "BBQ Tool Kit",
         "image": "🍖",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -137,6 +165,8 @@ function getInitialDatabase() {
         "id": 11,
         "name": "Art Supplies",
         "image": "🎨",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -145,6 +175,8 @@ function getInitialDatabase() {
         "id": 12,
         "name": "Tea Sampler",
         "image": "🍵",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -153,6 +185,8 @@ function getInitialDatabase() {
         "id": 13,
         "name": "Portable Charger",
         "image": "🔋",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -161,6 +195,8 @@ function getInitialDatabase() {
         "id": 14,
         "name": "Cozy Blanket",
         "image": "🛋️",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -169,6 +205,8 @@ function getInitialDatabase() {
         "id": 15,
         "name": "Recipe Book",
         "image": "📖",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -177,6 +215,8 @@ function getInitialDatabase() {
         "id": 16,
         "name": "Desk Organizer",
         "image": "📌",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -185,6 +225,8 @@ function getInitialDatabase() {
         "id": 17,
         "name": "Essential Oils Set",
         "image": "🧴",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -193,6 +235,8 @@ function getInitialDatabase() {
         "id": 18,
         "name": "Travel Mug",
         "image": "🥤",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -201,6 +245,8 @@ function getInitialDatabase() {
         "id": 19,
         "name": "Puzzle Game",
         "image": "🧩",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -209,6 +255,8 @@ function getInitialDatabase() {
         "id": 20,
         "name": "Scented Candles",
         "image": "🕯️",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -217,6 +265,8 @@ function getInitialDatabase() {
         "id": 21,
         "name": "Kitchen Gadget Set",
         "image": "🍴",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -225,6 +275,8 @@ function getInitialDatabase() {
         "id": 22,
         "name": "Phone Stand",
         "image": "📱",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -233,6 +285,8 @@ function getInitialDatabase() {
         "id": 23,
         "name": "Notebook Set",
         "image": "📝",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
@@ -241,6 +295,8 @@ function getInitialDatabase() {
         "id": 24,
         "name": "Water Bottle",
         "image": "💧",
+        "imageUrl": "",
+        "productUrl": "",
         "value": 50,
         "revealed": false,
         "winner": null
