@@ -1,0 +1,241 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "name": "Bunny",
+      "score": 600
+    },
+    {
+      "id": 2,
+      "name": "Bun Tea",
+      "score": 400
+    },
+    {
+      "id": 3,
+      "name": "Dilkush",
+      "score": 150
+    },
+    {
+      "id": 4,
+      "name": "Dil Pasand",
+      "score": 150
+    },
+    {
+      "id": 5,
+      "name": "Irani Chai",
+      "score": 150
+    },
+    {
+      "id": 6,
+      "name": "Coffee",
+      "score": 300
+    }
+  ],
+  "goodies": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "image": "🎧",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 2,
+      "name": "Gourmet Coffee Set",
+      "image": "☕",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 3,
+      "name": "Gaming Mouse",
+      "image": "🖱️",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 4,
+      "name": "Smart Watch",
+      "image": "⌚",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 5,
+      "name": "Bluetooth Speaker",
+      "image": "🔊",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 6,
+      "name": "Instant Camera",
+      "image": "📷",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 7,
+      "name": "Plant Terrarium",
+      "image": "🌿",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 8,
+      "name": "Book Collection",
+      "image": "📚",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 9,
+      "name": "Yoga Mat Set",
+      "image": "🧘",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 10,
+      "name": "BBQ Tool Kit",
+      "image": "🍖",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 11,
+      "name": "Art Supplies",
+      "image": "🎨",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 12,
+      "name": "Tea Sampler",
+      "image": "🍵",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 13,
+      "name": "Portable Charger",
+      "image": "🔋",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 14,
+      "name": "Cozy Blanket",
+      "image": "🛋️",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 15,
+      "name": "Recipe Book",
+      "image": "📖",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 16,
+      "name": "Desk Organizer",
+      "image": "📌",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 17,
+      "name": "Essential Oils Set",
+      "image": "🧴",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 18,
+      "name": "Travel Mug",
+      "image": "🥤",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 19,
+      "name": "Puzzle Game",
+      "image": "🧩",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 20,
+      "name": "Scented Candles",
+      "image": "🕯️",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 21,
+      "name": "Kitchen Gadget Set",
+      "image": "🍴",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 22,
+      "name": "Phone Stand",
+      "image": "📱",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 23,
+      "name": "Notebook Set",
+      "image": "📝",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    },
+    {
+      "id": 24,
+      "name": "Water Bottle",
+      "image": "💧",
+      "value": 50,
+      "revealed": false,
+      "winner": null
+    }
+  ],
+  "bids": [],
+  "gameState": {
+    "currentTurn": null,
+    "gameStatus": "in_progress",
+    "revealedItems": [],
+    "lastUpdated": "2025-12-27T02:37:03.185Z"
+  },
+  "settings": {
+    "minBidAmount": 1,
+    "maxBidAmount": 1000,
+    "allowNegativeScores": false,
+    "autoDeductPoints": true
+  }
+}
